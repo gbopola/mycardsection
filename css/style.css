@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600,800&display=swap');
+
+:root {
+    /* primary colors */
+    --red-color: hsl(0, 78%, 62%);
+    --cyan-color: hsl(180, 62%, 55%);
+    --orange-color: hsl(34, 97%, 64%);
+    --blue-color: hsl(212, 86%, 64%);
+    /* neutral */
+    --dark-blue: hsl(234, 12%, 34%);
+    --grey-blue: hsl(229, 6%, 66%);
+}
+
+body {
+    background: rgb(240, 240, 240);
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+h1 span {
+    display: block;
+    color: var(--dark-blue);
+    font-weight: 600;
+    font-size: 2.5rem;
+
+}
+
+.p {
+    font-weight: 600;
+}
+
+.lead {
+    color: var(--grey-blue);
+}
+
+p span {
+    display: block;
+}
+
+.top {
+    color: var(--dark-blue);
+    font-weight: 200;
+    font-size: 2.5rem;
+}
+
+.card h2 {
+    color: var(--dark-blue);
+}
+
+.cards {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+#content {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.card {
+    border-radius: 5px;
+    background: #fff;
+    padding: 2rem;
+    margin: 0.5rem;
+    max-width: 500px;
+}
+
+.green {
+    border-top: 5px solid var(--cyan-color);
+    grid-area: 2 / 1 / 4 / 2;
+  } 
+     
+.blue {
+    border-top: 5px solid var(--blue-color);
+    grid-area: 2 / 3 / 4 / 4;
+}
+
+.yellow {
+    border-top: 5px solid var(--orange-color);
+    grid-area: 3 / 2 / 5 / 3;
+}
+
+.red {
+    border-top: 5px solid var(--red-color);
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.icon {
+    float: right;
+}
+
+@media screen and (max-width: 1200px) {
+
+     .cards {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+}
+
+@media screen and (max-width: 1300px) {
+    .icon {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    p span {
+        display: inline;
+    }
+}
